@@ -1,2 +1,0 @@
-# SNZ_Documentation
- 
