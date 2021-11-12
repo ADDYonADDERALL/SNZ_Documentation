@@ -1,5 +1,34 @@
 # SNZ Handler
 
+## How to install
+
+#### Installation
+###### ESX
+Whole script is plug&play all you need to do is edit your server.cfg
+```
+ensure SNZ_Handler
+```
+###### QBCORE
+For QB you need to change fxmanifest.lua:
+
+From:
+```
+Line 20:
+shared_scripts {
+    --'@qb-core/import.lua',
+    'shared/config.lua',
+}
+```
+
+To:
+```
+Line 20:
+shared_scripts {
+    '@qb-core/import.lua',
+    'shared/config.lua',
+}
+```
+
 ## Shared
 ### Config
 #### Framework
