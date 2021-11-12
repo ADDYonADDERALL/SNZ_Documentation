@@ -76,6 +76,21 @@ Config.FuelScript = 'legacyfuel'
 ***
 ## HTML
 
+#### Boot Menu Pictures
+
+In file: 
+```
+SNZ_UI/client/html/index.html
+```
+Code:
+```
+<div class="background-image">
+	<img src="https://game-insider.com/wp-content/uploads/gta5-grand-theft-auto-v-grand-theft-auto-hollywood-wallpaper.jpg" />
+</div>
+```
+
+You need to only change source of <img>. 
+
 ## Client
 ***
 ### Voice Setup
