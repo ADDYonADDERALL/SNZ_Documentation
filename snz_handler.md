@@ -1,8 +1,7 @@
 # SNZ Handler
 
-## Client
+## Shared
 ### Config
-***
 #### Framework
 Used to set the framework that your RP server is using available options are:
 * ESX
@@ -60,11 +59,7 @@ Name of the zones.
 ['VINE'] = 'Vinewood',
 ```
 ***
-### HTML
-#### blablalba
-blabla
-```
-```
+## Client
 ***
 ### Exports
 #### GetSharedObject
@@ -76,25 +71,6 @@ SNZ = nil
 Citizen.CreateThread(function()
 	while not SNZ do
 		SNZ = exports[Config.HandlerName]:GetSharedObject()
-		Citizen.Wait(10)
-	end
-end)
-```
-***
-#### GetFrameworkStatus
-Pulls the SNZ Object status; checks if Handler is ready.  
-Returns Boolean
-##### Example
-```
-SNZ = nil
-SNZ.FrameworkLoaded = false
-Citizen.CreateThread(function()
-	while not SNZ do
-		SNZ = exports[Config.HandlerName]:GetSharedObject()
-		Citizen.Wait(10)
-	end
-	while not SNZ.FrameworkLoaded do
-		SNZ.FrameworkLoaded = exports[Config.HandlerName]:GetFrameworkStatus()
 		Citizen.Wait(10)
 	end
 end)
@@ -181,6 +157,15 @@ print(PedData.Zone)
 print(PedData.StreetLabel.Direction)
 print(PedData.StreetLabel.Zone)
 print(PedData.StreetLabel.Street)
+```
+***
+#### GetConfig
+Pulls config.
+Returns Table
+##### Example
+```
+local Config = exports['SNZ_Handler']:GetConfig()
+print(Config.Framework)
 ```
 ***
 ### Events
@@ -271,5 +256,26 @@ Triggers whenever player stops sprinting.
 AddEventHandler('SNZ_Handler:IsNotSprinting', function()
 	-- do something
 end)
+```
+***
+## Server
+***
+### Exports
+#### GetSharedObject
+Pulls the SNZ Object which includes selected Framework Object.  
+Returns Object
+##### Example
+```
+SNZ = nil
+SNZ = exports[Config.HandlerName]:GetSharedObject()
+```
+***
+#### GetConfig
+Pulls config.
+Returns Table
+##### Example
+```
+local Config = exports['SNZ_Handler']:GetConfig()
+print(Config.Framework)
 ```
 ***
