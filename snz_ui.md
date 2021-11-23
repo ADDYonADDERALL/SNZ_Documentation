@@ -73,6 +73,7 @@ Set your current voice resource available options are:
 * tokovoip
 * mumblevoip
 * pmavoice
+* saltychat
 ##### Example
 ```
 Config.Voice = 'esx'
@@ -99,6 +100,7 @@ Config.UseFuel = true
 #### FuelScript
 Fuel resource you are using available options are:
 * legacyfuel
+* rex_legacyfuel
 ##### Example
 ```
 Config.FuelScript = 'legacyfuel'
