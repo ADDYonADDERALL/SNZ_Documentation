@@ -419,6 +419,10 @@ RegisterCommand('cycleproximity', function()
 end, false)
 ```
 ***
+#### SaltyChat
+Only change in config to 'saltychat'
+Basically you have to do nothing; already comes with support by default
+***
 ### Exports
 #### ToggleUI
 Toggles UI on and off.  
